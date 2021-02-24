@@ -89,3 +89,5 @@ All of the simulation-code will be built from scratch
 
 ### Blog
 
+https://github.com/GammaEpsilon/DD1354_Project/wiki/Blog
+
