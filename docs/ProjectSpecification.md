@@ -66,8 +66,8 @@ The simulation will be implemented in Python 3 using Pygame for visualization an
 | Characteristic | Priority      | Complexity |
 |:--------------:|:-------------:|:----------:|
 | Calculated the same way as the original movement arch, but with the force of the bat applied to the ball as the starting velocity | High | Easy |
-| Runs until hitting ground (to start with) | High | Easy |
-| Implement different elasticity for collision | Low | Hard |
+| Runs until hitting ground no vertical velocity left | High | Easy |
+| ~~Implement different elasticity for collision~~ | ~~Low~~ | ~~Hard~~ |
 
 ### References
 
@@ -79,9 +79,9 @@ The simulation will be implemented in Python 3 using Pygame for visualization an
 
 | Risk | Counter-actions |
 |:--------------:|:-------------:|
-| Pygame is too limited for good visualization | Test the visualization part early |
-| Python 3 is too slow | Write computationally demanding parts in C. Avoid running the simulation in real-time |
-| Project is too simple for a pass| Receive feedback from Chris Peters and TAs early in development. Have ideas of extension of the code ready |
+| ~~Pygame is too limited for good visualization~~ | ~~Test the visualization part early~~ |
+| ~~Python 3 is too slow~~ | ~~Write computationally demanding parts in C. Avoid running the simulation in real-time~~ |
+| ~~Project is too simple for a pass~~| ~~Receive feedback from Chris Peters and TAs early in development. Have ideas of extension of the code ready~~ |
 
 ### Degree of simulation
 
