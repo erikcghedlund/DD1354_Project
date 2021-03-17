@@ -1,0 +1,30 @@
+{
+"balls":[
+    {
+        "mass":4,
+        "x":50,
+        "y":1,
+        "angle":3.9269908169872414,
+        "gravity":9.81e1,
+        "velocity":100,
+        "air_density":0.2,
+        "alghoritm":"euler"
+    }
+],
+"bats":[
+    {
+        "mass":4,
+        "x":0,
+        "y":0,
+        "acceleration":400,
+        "alghoritm":"euler"
+    }
+],
+"visualsettings":[
+    {
+        "zoom":4,
+        "width":1920,
+        "height":1080
+    }
+]
+}
