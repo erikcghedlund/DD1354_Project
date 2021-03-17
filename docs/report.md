@@ -212,10 +212,6 @@ If extended to 3D, the ball physics could be used for an actual baseball video g
 1. [Collision between two bodies (No code available)](https://ophysics.com/e2.html)
 2. [Simulation of the arch travelled (No code available)](https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html)
 
-<div style="page-break-after: always; visibility: hidden"> 
-\pagebreak 
-</div>
-
 ## Appendix
 
 ### Project Specification
