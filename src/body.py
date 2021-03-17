@@ -42,6 +42,12 @@ class Body:
         yf3 = timestep*f(self.vy+timestep/2, self.y+yf2/2)
         yf4 = timestep*f(self.vy+timestep, self.y+yf3)
         self.y += 6**-1*(yf1+yf2+yf3+yf4)
+
+    def __sign__(self, val):
+        try:
+            return val/abs(val)
+        except ZeroDivisionError:
+            return 0
             
 
             
@@ -57,18 +63,17 @@ class Ball(Body):
         self.apply_force_angle(self.gravity*timestep, pi/2)
 
     def air_resistance(self, timestep=1):
-        self.apply_force(-self.vx*self.air_resistance_factor*timestep, -self.vy*self.air_resistance_factor*timestep)
+        def foo(V): 
+            dragcoefficient = 0.47
+            radius = 2**-1
+            return (((V**2)*dragcoefficient*radius*self.air_resistance_factor/2))
+        self.apply_force((-foo(self.vx)/self.mass)*timestep*self.__sign__(self.vx), (-foo(self.vy)/self.mass)*timestep*self.__sign__(self.vy))
 
 class Bat(Body):
     def __init__(self, mass, x, y, acceleration, alghoritm="euler", cx=0, cy=0):
         super().__init__(mass, x, y, 0, alghoritm)
         self.set_angle(cx, cy)
         self.acceleration = acceleration
-    def __sign__(self, val):
-        try:
-            return val/abs(val)
-        except ZeroDivisionError:
-            return 0
 
     def accelerate(self, timestep=1):
         self.apply_force_angle(self.acceleration*timestep)

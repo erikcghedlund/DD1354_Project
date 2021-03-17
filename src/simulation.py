@@ -9,7 +9,7 @@ class Sim:
         self.bat = bat
         self.timestep = timestep
         self.original_arch = self.__original_arch__()
-        self.elasticity = 1
+        self.elasticity = 0.95
 
     def turn_init(self, cp_index):
         # Init bat
@@ -82,7 +82,7 @@ class Sim:
 
     def __bounce__(self):
         self.ball.vy *= -self.elasticity
-        if round(self.ball.vy, 3) > 0.00: # Can't really justify this constant
+        if round(self.ball.vy, 2) > 0.0: # Can't really justify this constant
             self.state_index -= 2 # This is a fucking dirty hack
     
     def __original_arch__(self):
